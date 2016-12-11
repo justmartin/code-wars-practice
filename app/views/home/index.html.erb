@@ -1,17 +1,12 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
+    <h3 class="panel-title">Formatting decimal places #0</h3>
+    <p>Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-def sum(n)
-    result = 0
-    i = 1
-    while i <= n
-        result += i
-        i += 1
-    end
-    return result
+def two_decimal_places(n)
+  n.round(2)
 end
 </pre>
   </div>
