@@ -109,3 +109,26 @@ end
 </pre>
   </div>
 </div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sum of two lowest positive integers</h3>
+    <p>Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.</p>
+  </div>
+  <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def sum_two_smallest_numbers(numbers)
+  sorted = numbers.sort
+  min1 = sorted[0]
+  min2 = sorted[1]
+  result = min1 + min2
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
+</pre>
+  </div>
+</div>
