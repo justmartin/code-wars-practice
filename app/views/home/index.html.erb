@@ -62,12 +62,14 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-    <p></p>
+    <h3 class="panel-title">Removing Elements</h3>
+    <p>Take an array and remove every second element out of that array. Always keep the first element and start removing with the next element.</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def remove_every_other(arr)
+  arr.select.each_with_index { |_, i| i.even? }
+end
 </pre>
   </div>
 </div>
