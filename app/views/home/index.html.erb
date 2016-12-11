@@ -90,12 +90,22 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-    <p></p>
+    <h3 class="panel-title">Friend or Foe?</h3>
+    <p>Make a program that filters a list of strings and returns a list with only your friends name in it. If a name has 4 letters in it, you can be sure that it has to be a friend of yours!</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+def friend(friends)
+  arr = []
+  friends.collect { |x| arr.push(x) if x.length == 4  }
+  return arr
+end
+</pre>
 
+<pre class="prettyprint lang-ruby linenums">
+def friend(friends)
+  friends.select { |name| name.length == 4 }
+end
 </pre>
   </div>
 </div>
