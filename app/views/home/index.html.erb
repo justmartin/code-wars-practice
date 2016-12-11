@@ -27,6 +27,7 @@ def howManyLightsabersDoYouOwn(name = "")
   end
 end
 </pre>
+
 <pre class="prettyprint lang-ruby linenums">
 def howManyLightsabersDoYouOwn(name="")
   name == "Zach" ? 18 : 0
@@ -37,13 +38,23 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-    <p></p>
+    <h3 class="panel-title">Are You Playing Banjo?</h3>
+    <p>Create a function which answers the question "Are you playing Banjo?". If your name starts with the letter "R" or lower case "r", you are playing Banjo!</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-def two_decimal_places(n)
-  n.round(2)
+def are_you_playing_banjo(name)
+  if name.downcase[0] == "r"
+    name + " plays banjo"
+  else
+    name + " does not play banjo"
+  end
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def are_you_playing_banjo(name)
+  name[0].downcase == "r" ? "#{name} plays banjo" : "#{name} does not play banjo"
 end
 </pre>
   </div>
@@ -56,9 +67,7 @@ end
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-def two_decimal_places(n)
-  n.round(2)
-end
+
 </pre>
   </div>
 </div>
@@ -70,9 +79,7 @@ end
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-def two_decimal_places(n)
-  n.round(2)
-end
+
 </pre>
   </div>
 </div>
@@ -84,9 +91,7 @@ end
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-def two_decimal_places(n)
-  n.round(2)
-end
+
 </pre>
   </div>
 </div>
