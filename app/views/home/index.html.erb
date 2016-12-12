@@ -239,12 +239,14 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Convert an array of strings to array of numbers</h3>
+    <p>#Oh no! ###Some really funny web dev gave you an array of numbers from his API response as an array of strings! You need to cast the whole array to the correct type. Create a function that takes as a parameter an array of numbers represented as strings and outputs an array of numbers.</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def to_number_array(string_array)
+  string_array.map(&:to_f)
+end
 </pre>
   </div>
 </div>
