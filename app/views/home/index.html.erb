@@ -132,3 +132,69 @@ end
 </pre>
   </div>
 </div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Highest and Lowest</h3>
+    <p>In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.</p>
+  </div>
+  <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def high_and_low(numbers)
+  arr = numbers.split(" ").map(&:to_i).minmax
+  min = arr[0].to_s
+  max = arr[1].to_s
+  result = max + " " + min
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def high_and_low(numbers)
+  numbers.split.map(&:to_i).minmax.reverse.join(' ')
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def high_and_low(numbers)
+  a = numbers.split.map(&:to_i).sort
+  "#{a.last} #{a.first}"
+end
+</pre>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+  </div>
+  <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+  </div>
+  <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+  </div>
+  <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+  </div>
+</div>
