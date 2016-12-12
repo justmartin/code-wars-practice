@@ -194,12 +194,14 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Convert number to reversed array of digits</h3>
+    <p>Given a random number: You have to return the digits of this number within an array in reverse order.</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def digitize(n)
+  n.to_s.split("").map(&:to_i).reverse
+end
 </pre>
   </div>
 </div>
