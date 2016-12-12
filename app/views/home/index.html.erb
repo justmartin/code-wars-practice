@@ -253,12 +253,28 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Remove the minimum</h3>
+    <p>Given an array of integers, remove the smallest value. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list. Don't change the order of the elements that are left.</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+def remove_smallest(numbers)
+  if numbers != []
+    min = numbers.index(numbers.min)
+    numbers.delete_at(min)
+    numbers
+  else
+    []
+  end
+end
+</pre>
 
+<pre class="prettyprint lang-ruby linenums">
+def remove_smallest(numbers)
+  return [] if numbers.empty?
+  numbers.delete_at(numbers.index(numbers.min))
+  return numbers
+end
 </pre>
   </div>
 </div>
