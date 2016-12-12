@@ -165,12 +165,29 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Make a function that does arithmetic!</h3>
+    <p>Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them. a and b will both be positive integers, and a will always be the first number in the operation, and b always the second. The four operators are "add", "subtract", "divide", "multiply".</p>
   </div>
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+def arithmetic(a, b, operator)
+  if operator == "add"
+    a + b
+  elsif operator == "subtract"
+    a - b
+  elsif operator == "divide"
+    a / b
+  elsif operator == "multiply"
+   a * b
+  end
+end
+</pre>
 
+<pre class="prettyprint lang-ruby linenums">
+def arithmetic(a, b, operator)
+ ar={"add"=>a+b,"subtract"=>a-b,"multiply"=>a*b,"divide"=>a.div(b)}
+ ar[operator]
+end
 </pre>
   </div>
 </div>
