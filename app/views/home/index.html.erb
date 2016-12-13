@@ -2,13 +2,17 @@
   <div class="panel-heading">
     <h3 class="panel-title">Formatting decimal places #0</h3>
     <p>Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.</p>
+    <a data-toggle="collapse" href="#collapse1">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse1" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def two_decimal_places(n)
   n.round(2)
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -16,8 +20,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">How many lightsabers do you own?</h3>
     <p>Inspired by the development team at Vooza, write the function howManyLightsabersDoYouOwn that accepts the name of a programmer, and returns the number of lightsabers owned by that person. The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.</p>
+    <a data-toggle="collapse" href="#collapse2">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse2" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def howManyLightsabersDoYouOwn(name = "")
   if name == "Zach"
@@ -33,6 +40,7 @@ def howManyLightsabersDoYouOwn(name="")
   name == "Zach" ? 18 : 0
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -40,8 +48,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Are You Playing Banjo?</h3>
     <p>Create a function which answers the question "Are you playing Banjo?". If your name starts with the letter "R" or lower case "r", you are playing Banjo!</p>
+    <a data-toggle="collapse" href="#collapse3">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse3" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def are_you_playing_banjo(name)
   if name.downcase[0] == "r"
@@ -57,6 +68,7 @@ def are_you_playing_banjo(name)
   name[0].downcase == "r" ? "#{name} plays banjo" : "#{name} does not play banjo"
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -64,13 +76,17 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Removing Elements</h3>
     <p>Take an array and remove every second element out of that array. Always keep the first element and start removing with the next element.</p>
+    <a data-toggle="collapse" href="#collapse4">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse4" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def remove_every_other(arr)
   arr.select.each_with_index { |_, i| i.even? }
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -78,13 +94,17 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Even or Odd</h3>
     <p>Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.</p>
+    <a data-toggle="collapse" href="#collapse5">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse5" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def even_or_odd(number)
   number.even? ? "Even" : "Odd"
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -92,8 +112,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Friend or Foe?</h3>
     <p>Make a program that filters a list of strings and returns a list with only your friends name in it. If a name has 4 letters in it, you can be sure that it has to be a friend of yours!</p>
+    <a data-toggle="collapse" href="#collapse6">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse6" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def friend(friends)
   arr = []
@@ -107,6 +130,7 @@ def friend(friends)
   friends.select { |name| name.length == 4 }
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -114,8 +138,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Sum of two lowest positive integers</h3>
     <p>Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.</p>
+    <a data-toggle="collapse" href="#collapse7">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse7" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def sum_two_smallest_numbers(numbers)
   sorted = numbers.sort
@@ -130,6 +157,7 @@ def sum_two_smallest_numbers(numbers)
   numbers.min(2).reduce(:+)
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -137,8 +165,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Highest and Lowest</h3>
     <p>In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.</p>
+    <a data-toggle="collapse" href="#collapse8">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse8" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def high_and_low(numbers)
   arr = numbers.split(" ").map(&:to_i).minmax
@@ -160,6 +191,7 @@ def high_and_low(numbers)
   "#{a.last} #{a.first}"
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -167,8 +199,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Make a function that does arithmetic!</h3>
     <p>Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them. a and b will both be positive integers, and a will always be the first number in the operation, and b always the second. The four operators are "add", "subtract", "divide", "multiply".</p>
+    <a data-toggle="collapse" href="#collapse9">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse9" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def arithmetic(a, b, operator)
   if operator == "add"
@@ -189,6 +224,7 @@ def arithmetic(a, b, operator)
  ar[operator]
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -196,13 +232,17 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Convert number to reversed array of digits</h3>
     <p>Given a random number: You have to return the digits of this number within an array in reverse order.</p>
+    <a data-toggle="collapse" href="#collapse10">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse10" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def digitize(n)
   n.to_s.split("").map(&:to_i).reverse
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -213,13 +253,17 @@ end
     e.g. 
     string_to_array("Robin Singh") => ["Robin", "Singh"],
     string_to_array("I love arrays they are my favorite") => ["I", "love", "arrays", "they", "are", "my", "favorite"]</p>
+    <a data-toggle="collapse" href="#collapse11">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse11" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def string_to_array(string)
   string.split(" ")
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -227,13 +271,17 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Descending Order</h3>
     <p>Your task is to make a function that can take any non-negative integer as a argument and return it with it's digits in descending order. Descending order means that you take the highest digit and place the next highest digit immediately after it.</p>
+    <a data-toggle="collapse" href="#collapse12">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse12" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def descending_order(n)
   n.to_s.split("").sort.reverse.join.to_i
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -241,13 +289,17 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Convert an array of strings to array of numbers</h3>
     <p>#Oh no! ###Some really funny web dev gave you an array of numbers from his API response as an array of strings! You need to cast the whole array to the correct type. Create a function that takes as a parameter an array of numbers represented as strings and outputs an array of numbers.</p>
+    <a data-toggle="collapse" href="#collapse13">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse13" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def to_number_array(string_array)
   string_array.map(&:to_f)
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -255,7 +307,10 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Remove the minimum</h3>
     <p>Given an array of integers, remove the smallest value. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list. Don't change the order of the elements that are left.</p>
+    <a data-toggle="collapse" href="#collapse14">Answer</a>
   </div>
+
+  <div id="collapse14" class="panel-collapse collapse">
   <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 def remove_smallest(numbers)
@@ -276,6 +331,7 @@ def remove_smallest(numbers)
   return numbers
 end
 </pre>
+    </div>
   </div>
 </div>
 
@@ -283,8 +339,11 @@ end
   <div class="panel-heading">
     <h3 class="panel-title">Bubble Sort</h3>
     <p>White Board Example w/Dylan</p>
+    <a data-toggle="collapse" href="#collapse15">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse15" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 numbers = [1, 3, 2, 5, 4] # => [1, 2, 3, 4, 5]
 
@@ -298,6 +357,7 @@ end
 
 p numbers
 </pre>
+    </div>
   </div>
 </div>
 
@@ -305,11 +365,15 @@ p numbers
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
     <p></p>
+    <a data-toggle="collapse" href="#collapse16">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse16" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
 </pre>
+    </div>
   </div>
 </div>
 
@@ -317,11 +381,15 @@ p numbers
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
     <p></p>
+    <a data-toggle="collapse" href="#collapse17">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse17" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
 </pre>
+    </div>
   </div>
 </div>
 
@@ -329,11 +397,15 @@ p numbers
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
     <p></p>
+    <a data-toggle="collapse" href="#collapse18">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse18" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
 </pre>
+    </div>
   </div>
 </div>
 
@@ -341,10 +413,30 @@ p numbers
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
     <p></p>
+    <a data-toggle="collapse" href="#collapse19">Answer</a>
   </div>
-  <div class="panel-body">
+
+  <div id="collapse19" class="panel-collapse collapse">
+    <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
 </pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+    <a data-toggle="collapse" href="#collapse20">Answer</a>
+  </div>
+
+  <div id="collapse20" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+    </div>
   </div>
 </div>
