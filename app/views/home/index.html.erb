@@ -512,12 +512,41 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Shortest Word</h3>
+    <p>x Simple, given a string of words, return the length of the shortest word(s). String will never be empty and you do not need to account for different data types.</p>
     <a data-toggle="collapse" href="#collapse22">Answer</a>
   </div>
 
   <div id="collapse22" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def find_short(s)
+  z = []
+  arr = s.split(" ")
+  arr.each do |x|
+    z.push(x.length)
+  end
+  z.min
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def find_short(s)
+  s.split.map(&:size).min
+end
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sort Numbers</h3>
+    <p>Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.</p>
+    <a data-toggle="collapse" href="#collapse23">Answer</a>
+  </div>
+
+  <div id="collapse23" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
@@ -530,10 +559,42 @@ end
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
     <p></p>
-    <a data-toggle="collapse" href="#collapse23">Answer</a>
+    <a data-toggle="collapse" href="#collapse24">Answer</a>
   </div>
 
-  <div id="collapse23" class="panel-collapse collapse">
+  <div id="collapse24" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+    <a data-toggle="collapse" href="#collapse25">Answer</a>
+  </div>
+
+  <div id="collapse25" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+    <a data-toggle="collapse" href="#collapse26">Answer</a>
+  </div>
+
+  <div id="collapse26" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
