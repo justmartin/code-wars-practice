@@ -559,15 +559,33 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Stop gninnipS My sdroW!</h3>
+    <p>Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+    Example: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" </p>
     <a data-toggle="collapse" href="#collapse24">Answer</a>
   </div>
 
   <div id="collapse24" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+def spinWords(string)
+  results = []
+  arr = string.split(" ")
+  arr.each do |word|
+    if word.length >= 5
+      results.push(word.reverse)
+    else
+      results.push(word)
+    end
+  end
+  results.join(" ")
+end
+</pre>
 
+<pre class="prettyprint lang-ruby linenums">
+def spinWords(string)
+  string.split.map { |s| s.length >= 5 ? s.reverse : s }.join ' '
+end
 </pre>
     </div>
   </div>
