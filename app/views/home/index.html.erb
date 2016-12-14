@@ -452,12 +452,88 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">List Filtering</h3>
+    <p>Create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.</p>
     <a data-toggle="collapse" href="#collapse20">Answer</a>
   </div>
 
   <div id="collapse20" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def filter_list(l)
+  result= []
+  l.each do |x|
+    if x.is_a?(Integer)
+      result.push(x)
+    end
+  end
+  result
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def filter_list(l)
+l.select{|i| i.is_a?(Integer)}
+end
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Javascript filter - 1</h3>
+    <p>While developing a website, you detect that some of the members have troubles logging in. Searching through the code you find that all logins ending with a "_" make problems. So you want to write a function that takes an array of pairs of login-names and e-mails, and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_". [[ "foo", "foo@foo.com" ], [ "bar_", "bar@bar.com" ]] => [[ "bar_", "bar@bar.com" ]]</p>
+    <a data-toggle="collapse" href="#collapse21">Answer</a>
+  </div>
+
+  <div id="collapse21" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def search_names(logins)
+  results = []
+  logins.each do |x|
+    if x[0].split("").pop == "_"
+      results.push(x)
+    end
+  end
+  results
+end
+</pre>
+
+<pre class="prettyprint lang-ruby linenums">
+def search_names(logins)
+  logins.select { |nick, mail| nick.end_with?('_') }
+end
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+    <a data-toggle="collapse" href="#collapse22">Answer</a>
+  </div>
+
+  <div id="collapse22" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"></h3>
+    <p></p>
+    <a data-toggle="collapse" href="#collapse23">Answer</a>
+  </div>
+
+  <div id="collapse23" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
 
