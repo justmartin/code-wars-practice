@@ -593,15 +593,19 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Simple Pig Latin</h3>
+    <p>Move the first letter of each word to the end of it, then add 'ay' to the end of the word. Example: pig_it('Pig latin is cool') # igPay atinlay siay oolcay</p>
     <a data-toggle="collapse" href="#collapse25">Answer</a>
   </div>
 
   <div id="collapse25" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def pig_it(string)
+ string.split(" ").map do |word|
+    word[1..-1] + word[0] + "ay"
+  end.join(" ")
+end
 </pre>
     </div>
   </div>
