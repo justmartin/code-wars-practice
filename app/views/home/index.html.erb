@@ -648,15 +648,24 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Find the odd int</h3>
+    <p>Given an array, find the int that appears an odd number of times. There will always be only one integer that appears an odd number of times.</p>
     <a data-toggle="collapse" href="#collapse27">Answer</a>
   </div>
 
   <div id="collapse27" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+def find_it(seq)
+  hash = Hash.new(0)
+  seq.each{|key| hash[key] += 1}
 
+  hash.each do |key, value|
+    if value.odd?
+      return key
+    end
+  end
+end
 </pre>
     </div>
   </div>
