@@ -1,6 +1,6 @@
 # Code Wars Practice
 
-Site built to store and practice various coding challenges and solutions.
+Site built to store and practice simple coding challenges and solutions.
 Built using Ruby on Rails and bootstrap-sass.
 
 ## How To Launch
