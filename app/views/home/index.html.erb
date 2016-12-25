@@ -715,13 +715,25 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Sum without highest and lowest number</h3>
+    <p>Sum all the numbers of the array (in F# and Haskell you get a list) except the highest and the lowest element (the value, not the index!). If array is empty, null or None, or if only 1 Element exists, return 0.</p>
     <a data-toggle="collapse" href="#collapse30">Answer</a>
   </div>
 
   <div id="collapse30" class="panel-collapse collapse">
     <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def sum_array(arr)
+  if arr == nil || arr == []
+    0
+  else
+    sum = arr.sort[1..-2].inject(:+)
+  end
+
+  sum == nil ? 0 : sum
+end
+</pre>
+
 <pre class="prettyprint lang-ruby linenums">
 
 </pre>
