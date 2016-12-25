@@ -749,15 +749,17 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">A Needle in the Haystack</h3>
+    <p>Write a function findNeedle() that takes an array full of junk but containing one "needle"</p>
     <a data-toggle="collapse" href="#collapse31">Answer</a>
   </div>
 
   <div id="collapse31" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def find_needle(haystack)
+  "found the needle at position #{haystack.index("needle")}"
+end
 </pre>
     </div>
   </div>
