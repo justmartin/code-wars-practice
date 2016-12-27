@@ -809,15 +809,21 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Is this a triangle?</h3>
+    <p>Implement a method that accepts 3 integer values a, b, c. The method should return true if a triangle can be built with the sides of given length and false in any other case. (In this case, all triangles must have surface greater than 0 to be accepted).</p>
     <a data-toggle="collapse" href="#collapse34">Answer</a>
   </div>
 
   <div id="collapse34" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+def isTriangle(a,b,c)
+  if a + b > c && a + c > b && b + c > a
+    true
+  else 
+    false
+  end
+end
 </pre>
     </div>
   </div>
