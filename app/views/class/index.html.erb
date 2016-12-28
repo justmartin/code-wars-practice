@@ -1,0 +1,66 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Reverse a string w/out .reverse</h3>
+    <p>Given an array of letters ["j", "u", "s", "t", "i", "n"] return the reverse without using ruby's built in function. Answer = ["n", "i", "t", "s", "u", "j"]</p>
+    <a data-toggle="collapse" href="#collapse16">Answer</a>
+  </div>
+
+  <div id="collapse16" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def reverse_array(arr)
+  result = []
+  arr.each |x| do
+    y = arr.pop
+    result.push(y)
+  end
+  result
+end
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Reverse a string w/out .reverse</h3>
+    <p>Given an array of letters ["j", "u", "s", "t", "i", "n"] return the reverse without using ruby's built in function. Answer = ["n", "i", "t", "s", "u", "j"]</p>
+    <a data-toggle="collapse" href="#collapse16">Answer</a>
+  </div>
+
+  <div id="collapse16" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def reverse_array(arr)
+  result = []
+  arr.each |x| do
+    y = arr.pop
+    result.push(y)
+  end
+  result
+end
+</pre>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">English Version of Number</h3>
+    <p>Given an array of numbers, write a function to output the english version. [1, 2, 3] => ['one', 'two', 'three']</p>
+    <a data-toggle="collapse" href="#collapse17">Answer</a>
+  </div>
+
+  <div id="collapse17" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def english_version(arr)
+  result = []
+  arr.each |num| do
+    eng = {"1" => "one", "2" => "two", "3" => "three"}
+    result.push(eng(num))
+end
+</pre>
+    </div>
+  </div>
+</div>
