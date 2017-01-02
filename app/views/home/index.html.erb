@@ -830,3 +830,21 @@ end
     </div>
   </div>
 </div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Exclamation marks series #1: Remove a exclamation mark from the end of string</h3>
+    <p>Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.</p>
+    <a data-toggle="collapse" href="#collapse38">Answer</a>
+  </div>
+
+  <div id="collapse38" class="panel-collapse collapse">
+    <div class="panel-body">
+<pre class="prettyprint lang-ruby linenums">
+def remove(s)
+  s[-1] == "!" ? s.chomp("!") : s
+end
+</pre>
+    </div>
+  </div>
+</div>
