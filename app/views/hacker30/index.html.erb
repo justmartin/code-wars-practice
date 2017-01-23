@@ -69,10 +69,10 @@ puts s + z
     <h3 class="panel-title">Day 2: Operators</h3>
     <p>
       
-      <p><strong>Task</strong>
+      <p><strong>Task</strong> <br>
       Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.</p>
 
-      <p><strong>Note:</strong>
+      <p><strong>Note:</strong> <br>
       Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result!</p>
 
       <p><strong>Input Format</strong> <br>
@@ -120,15 +120,59 @@ puts "The total meal cost is #{meal_total.round(0)} dollars."
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Day 3: Intro to Conditional Statements</h3>
+    <p>
+      
+      <p><strong>Task</strong> <br>
+        Given an integer, n, perform the following conditional actions: <br>
+
+        If n is odd, print Weird <br>
+        If n is even and in the inclusive range of 2 to 5, print Not Weird <br>
+        If n is even and in the inclusive range of 6 to 20, print Weird <br>
+        If n is even and greater than 20, print Not Weird <br>
+        Complete the stub code provided in your editor to print whether or not  is weird.
+      </p>
+
+      <p><strong>Input Format</strong> <br>
+        A single line containing a positive integer, n.
+      </p>
+
+      <p><strong>Constraints</strong> <br>
+        1 <= n >= 100
+      </p>
+
+      <p><strong>Output Format</strong> <br>
+        Print Weird if the number is weird; otherwise, print Not Weird.
+      </p>
+
+      <p><strong>Sample Input</strong> <br>
+        0 <br>
+        24 <br>
+      </p>
+
+      <p><strong>Sample Output</strong> <br>
+        Weird <br>
+        Not Weird <br>
+      </p>
+
+    </p>
     <a data-toggle="collapse" href="#collapse3">Answer</a>
   </div>
 
   <div id="collapse3" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+n = gets.strip.to_i
 
+if n % 2 != 0
+    puts "Weird"
+elsif n % 2 == 0 && n >= 2 && n <= 5
+    puts "Not Weird"
+elsif n % 2 == 0 && n >= 6 && n <= 20
+    puts "Weird"
+elsif n % 2 == 0 && n > 20
+    puts "Not Weird"
+end
 </pre>
     </div>
   </div>
@@ -137,7 +181,27 @@ puts "The total meal cost is #{meal_total.round(0)} dollars."
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title"></h3>
-    <p></p>
+    <p>
+      
+      <p><strong>Task</strong> <br>
+      </p>
+
+      <p><strong>Note:</strong> <br>
+      </p>
+
+      <p><strong>Input Format</strong> <br>
+      </p>
+
+      <p><strong>Output Format</strong> <br>
+      </p>
+
+      <p><strong>Sample Input</strong> <br>
+      </p>
+
+      <p><strong>Sample Output</strong> <br>
+      </p>
+
+    </p>
     <a data-toggle="collapse" href="#collapse4">Answer</a>
   </div>
 
