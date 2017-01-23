@@ -1,14 +1,64 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <p></p>
+    <h3 class="panel-title">Day 1: Data Types</h3>
+    <p>
+
+      <p><strong>Task</strong> <br>
+        The variables i, d, and s are already declared and initialized for you. You must: <br>
+
+        1. Declare 3 variables: one of type int, one of type double, and one of type String. <br>
+
+        2. Read 3 lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your 3 variables. <br>
+
+        3.Use the + operator to perform the following operations: <br>
+          1. Print the sum of i plus your int variable on a new line. <br>
+          2. Print the sum of d plus your double variable to a scale of one decimal place on a new line. <br>
+          3. Concatenate s with the string you read as input and print the result on a new line.
+      </p>
+
+      <p><strong>Note:</strong> If you are using a language that doesn't support using + for string concatenation (e.g.: C), you can just print one variable immediately following the other on the same line. The string provided in your editor must be printed first, immediately followed by the string you read as input.</p>
+
+
+      <p><strong>Input Format</strong> <br>
+      The first line contains an integer that you must sum with i. <br>
+      The second line contains a double that you must sum with d. <br>
+      The third line contains a string that you must concatenate with s. <br>
+      </p>
+
+      <p><strong>Output Format</strong> <br>
+      Print the sum of both integers on the first line, the sum of both doubles (scaled to 1 decimal place) on the second line, and then the two concatenated strings on the third line.
+      </p>
+
+      <p><strong>Sample Input</strong> <br>
+      12 <br>
+      4.0 <br>
+      is the best place to learn and practice coding! <br>
+      </p>
+
+      <p><strong>Sample Output</strong> <br>
+      16 <br>
+      8.0 <br>
+      HackerRank is the best place to learn and practice coding! <br>
+      </p>
+
+    </p>
     <a data-toggle="collapse" href="#collapse1">Answer</a>
   </div>
 
   <div id="collapse1" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
-
+# Read and save an integer, double, and String to your variables.
+x = gets.strip.to_i
+y = gets.strip.to_f
+z = gets.strip
+# Print the sum of both integer variables on a new line.
+puts x + i
+# Print the sum of the double variables on a new line.
+puts y + d
+# Concatenate and print the String variables on a new line
+# The 's' variable above should be printed first.
+puts s + z
 </pre>
     </div>
   </div>
