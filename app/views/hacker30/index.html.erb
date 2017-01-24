@@ -326,25 +326,31 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
+    <h3 class="panel-title">Day 6: Let's Review</h3>
     <p>
 
       <p><strong>Task</strong> <br>
-      </p>
-
-      <p><strong>Note:</strong> <br>
+        Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line (see the Sample below for more detail).
       </p>
 
       <p><strong>Input Format</strong> <br>
+        The first line contains an integer, T(the number of test cases). 
+        Each line i of the T subsequent lines contain a String, S.
       </p>
 
       <p><strong>Output Format</strong> <br>
+        For each String Sj (where 0 <= j <= T-1), print 's even-indexed characters, followed by a space, followed by Sj's odd-indexed characters.
       </p>
 
       <p><strong>Sample Input</strong> <br>
+        2 <br>
+        Hacker <br>
+        Rank <br>
       </p>
 
       <p><strong>Sample Output</strong> <br>
+        Hce akr <br>
+        Rn ak <br>
       </p>
 
     </p>
@@ -354,7 +360,26 @@ end
   <div id="collapse6" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+n = gets.strip.to_i
+array = Array.new(n)
+(0..n-1).each do |x|
+    array[x] = gets.strip.split("") 
+end
 
+(0..n-1).each do |x|
+    even = []
+    odd = []
+    
+    array[x].each_with_index do |val, index|
+        if index.even?
+            even.push(val)
+        else
+            odd.push(val)
+        end
+    end
+    
+    puts "#{even.join("")} #{odd.join("")}"
+end
 </pre>
     </div>
   </div>
