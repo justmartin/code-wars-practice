@@ -498,25 +498,27 @@ end
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
+    <h3 class="panel-title">Day 9: Recursion</h3>
     <p>
       
       <p><strong>Task</strong> <br>
-      </p>
-
-      <p><strong>Note:</strong> <br>
+        Write a factorial function that takes a positive integer, N as a parameter and prints the result of N! (N factorial).
       </p>
 
       <p><strong>Input Format</strong> <br>
+        A single integer, N (the argument to pass to factorial).
       </p>
 
       <p><strong>Output Format</strong> <br>
+        Print a single integer denoting N!.
       </p>
 
       <p><strong>Sample Input</strong> <br>
+        3
       </p>
 
       <p><strong>Sample Output</strong> <br>
+        6
       </p>
 
     </p>
@@ -526,7 +528,13 @@ end
   <div id="collapse9" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+n = gets.strip.to_i
 
+def factorial(num)
+    puts (1..num).inject(:*)
+end
+
+factorial(n)
 </pre>
     </div>
   </div>
