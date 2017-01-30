@@ -536,6 +536,20 @@ end
 
 factorial(n)
 </pre>
+
+<pre class="prettyprint lang-ruby linenums">
+n = gets.strip.to_i
+
+def factorial(num)
+    if num == 1
+        return 1
+    else
+        return num * factorial(num-1)
+    end
+end
+
+puts factorial(n)
+</pre>
     </div>
   </div>
 </div>
