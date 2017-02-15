@@ -43,6 +43,38 @@ end
 
 p numbers
 </pre>
+
+<pre class="prettyprint lang-ruby linenums">
+#hackerrank solution Day #20
+#need variable to track number of iterations over array.  
+n = gets.strip.to_i
+arr = gets.strip.split(" ").map(&:to_i)
+
+def bubble_sort(n, array)
+    total_swaps = 0
+    
+    loop do
+        swaps_this_loop = 0
+        (n-1).times do |i|
+            if array[i] > array[i + 1]
+                array[i], array[i + 1] = array[i + 1], array[i]
+                swaps_this_loop += 1
+            end
+        end
+        
+        break if swaps_this_loop == 0
+        
+        total_swaps += swaps_this_loop 
+    end
+    
+    puts "Array is sorted in #{total_swaps} swaps."
+    puts "First Element: #{array[0]}"
+    puts "Last Element: #{array[-1]}"
+    
+end
+
+bubble_sort(n, arr)
+</pre>
     </div>
   </div>
 </div>
