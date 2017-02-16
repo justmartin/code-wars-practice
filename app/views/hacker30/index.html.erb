@@ -688,25 +688,52 @@ puts sums.max
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
+    <h3 class="panel-title">Day 12: Inheritance</h3>
     <p>
       
       <p><strong>Task</strong> <br>
-      </p>
-
-      <p><strong>Note:</strong> <br>
+        You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.<br>
+        <br>
+        Complete the Student class by writing the following:<br>
+        <br>
+        A Student class constructor, which has 4 parameters:<br>
+        A string, firstName.<br>
+        A string, lastName.<br>
+        An integer, id.<br>
+        An integer array (or vector) of test scores, scores.<br>
+        <br>
+        A char calculate() method that calculates a Student object's average and returns the grade character representative of their calculated average:<br>
+        <br>
+        Letter/Average: <br>
+        O / 90 <= a <=100 <br>
+        E / 80 <= a < 90 <br>
+        A / 70 <= a < 80 <br>
+        P / 55 <= a < 70 <br>
+        D / 40 <= a < 55 <br>
+        T / a < 40 <br>
       </p>
 
       <p><strong>Input Format</strong> <br>
+        The locked stub code in your editor calls your Student class constructor and passes it the necessary arguments. It also calls the calculate method (which takes no arguments). <br>
+        <br>
+        You are not responsible for reading the following input from stdin: 
+        The first line contains firstName, lastName, and id, respectively. The second line contains the number of test scores. The third line of space-separated integers describes .
       </p>
 
       <p><strong>Output Format</strong> <br>
+        This is handled by the locked stub code in your editor. Your output will be correct if your Student class constructor and calculate() method are properly implemented.
       </p>
 
       <p><strong>Sample Input</strong> <br>
+        Heraldo Memelli 8135627 <br>
+        2 <br>
+        100 80 <br>
       </p>
 
       <p><strong>Sample Output</strong> <br>
+        Name: Memelli, Heraldo <br>
+        ID: 8135627 <br>
+        Grade: O <br>
       </p>
 
     </p>
@@ -716,7 +743,56 @@ puts sums.max
   <div id="collapse12" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+class Person
+  def initialize(firstName, lastName, id)
+    @firstName = firstName
+    @lastName = lastName
+    @id = id
+  end
+  def printPerson()
+    print("Name: ",@lastName , ", " + @firstName ,"\nID: " , @id)
+  end
+end
 
+#task ==========================================
+class Student < Person
+
+    def initialize(firstName, lastName, id, scores)
+        super(firstName, lastName, id)
+        @scores = scores
+    end
+
+    def calculate()
+        total = @scores.inject(:+)
+        average = total / (@scores.count)
+            
+        if average >= 90 && average <= 100
+            "O"
+        elsif average >= 80 && average < 90
+            "E"
+        elsif average >= 70 && average < 80
+            "A"
+        elsif average >= 55 && average < 70
+            "P"
+        elsif average >= 40 && average < 55
+            "D"
+        elsif average < 40
+            "T"
+        end
+    end
+    
+end
+#task ==========================================
+
+input = gets.split()
+firstName = input[0]
+lastName = input[1]
+id = input[2].to_i
+numScores = gets.to_i
+scores = gets.strip().split().map!(&:to_i)
+s = Student.new(firstName, lastName, id, scores)
+s.printPerson           
+print("\nGrade: " + s.calculate)
 </pre>
     </div>
   </div>
