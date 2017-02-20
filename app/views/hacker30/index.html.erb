@@ -937,25 +937,33 @@ mylist.display(head)
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
+    <h3 class="panel-title">Day 16: Exceptions - String to Integer</h3>
     <p>
       
       <p><strong>Task</strong> <br>
+        Read a string, S, and print its integer value; if S cannot be converted to an integer, print Bad String.
       </p>
 
       <p><strong>Note:</strong> <br>
+        You must use the String-to-Integer and exception handling constructs built into your submission language. If you attempt to use loops/conditional statements, you will get a 0 score.
       </p>
 
       <p><strong>Input Format</strong> <br>
+        A single string, S.
       </p>
 
       <p><strong>Output Format</strong> <br>
+        Print the parsed integer value of S, or Bad String if S cannot be converted to an integer.
       </p>
 
       <p><strong>Sample Input</strong> <br>
+        3 <br>
+        za
       </p>
 
       <p><strong>Sample Output</strong> <br>
+        3 <br>
+        Bad String
       </p>
 
     </p>
@@ -965,7 +973,17 @@ mylist.display(head)
   <div id="collapse16" class="panel-collapse collapse">
     <div class="panel-body">
 <pre class="prettyprint lang-ruby linenums">
+S = gets.strip
 
+def int_to_string_begin_rescue(string)
+    begin
+      puts Integer(string)
+    rescue
+      puts "Bad String"
+    end
+end
+
+int_to_string_begin_rescue(S)
 </pre>
     </div>
   </div>
